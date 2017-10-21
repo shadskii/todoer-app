@@ -1,0 +1,21 @@
+group 'freetimelabs.desktop.apps'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    maven {
+        url 'http://nexus.gluonhq.com/nexus/content/repositories/releases/'
+    }
+}
+
+ext.GLUON_VERSION = "0.0.3"
+
+dependencies {
+    compile "com.gluonhq:charm:$GLUON_VERSION"
+    desktopRuntime "com.gluonhq:charm-desktop:$GLUON_VERSION"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
