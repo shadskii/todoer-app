@@ -2,8 +2,8 @@ package freetimelabs.desktop.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class TodoApplication extends Application
@@ -23,6 +23,7 @@ public class TodoApplication extends Application
     @Override
     public void start(Stage primaryStage) throws Exception
     {
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/check-box.png")));
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/MainScreen.fxml"));
         primaryStage.setScene(new Scene(loader.load()));

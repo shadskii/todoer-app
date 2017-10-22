@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="freetimelabs.desktop.app.MainScreenController">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="788.0" prefWidth="600.0" stylesheets="@global.css"
+            xmlns="http://javafx.com/javafx/8.0.111" fx:controller="freetimelabs.desktop.app.MainScreenController">
    <center>
-      <ListView fx:id="itemList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+       <VBox BorderPane.alignment="CENTER">
+           <children>
+               <ListView fx:id="itemList" editable="true" maxHeight="1.7976931348623157E308"
+                         maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
+           </children>
+       </VBox>
    </center>
    <bottom>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">

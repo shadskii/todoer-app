@@ -1,14 +1,7 @@
 package freetimelabs.desktop.app;
 
-import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.scene.control.*;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
-import javafx.util.Callback;
 
 import java.util.Objects;
 
@@ -31,9 +24,7 @@ public class MainScreenController
     public void initialize()
     {
         itemList.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) ->
-        {
-            completed.setText(newVal.completedProperty().get() ? "Undo Complete" : "Complete");
-        });
+                completed.setText(newVal.completedProperty().get() ? "Undo Complete" : "Complete"));
         completed.setOnAction(e ->
         {
             TodoItemModel selected = itemList.getSelectionModel().getSelectedItem();
