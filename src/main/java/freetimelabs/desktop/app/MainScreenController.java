@@ -7,6 +7,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.CheckBoxListCell;
 import javafx.util.StringConverter;
 
+/**
+ * Controller for MainScreen.fxml. Handles most of the functionality of the application.
+ */
 public class MainScreenController
 {
 
@@ -19,6 +22,9 @@ public class MainScreenController
     @FXML
     private TextField description;
 
+    /**
+     * Auto-called by FXMLLoader. Initializes listView.
+     */
     @FXML
     public void initialize()
     {
